@@ -4,4 +4,4 @@ Esses são os exercícios da aula de **programação 2**, 3ª fase de engenharia
 
 ### Diretórios 📚 
 
-- Introdução: Conceitos iniciais e revisão da disciplina anterior.
+- **Introdução:** Conceitos iniciais e revisão da disciplina anterior.
