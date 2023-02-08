@@ -10,9 +10,7 @@ int main()
 {
     int resposta_usuario, // para interação do computador e do usuário
     tentativas = 0, // conta em qts vezes o computador acertar numero
-    inicio = 0, fim = 100, meio,  // busca binária
-    i; // contador
-
+    inicio = 0, fim = 100, meio;  // busca binária
 
     for (int i = 0; i <= 7; i++) // 7x é o máx de tentativas
     {
