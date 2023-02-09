@@ -1,0 +1,19 @@
+// O programa imprime uma string invertida
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+    string str;
+
+    cin >> str;
+
+    // Imprime a string invertida
+    for (int i = (str).length(); i >= 0; i--)
+        cout << str[i];
+
+    return 0;
+}
