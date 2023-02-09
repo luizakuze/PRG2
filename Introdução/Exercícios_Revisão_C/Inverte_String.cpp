@@ -1,3 +1,4 @@
+// Inversor de String
 // O programa imprime uma string invertida
 
 #include <iostream>
@@ -9,7 +10,7 @@ int main()
 {
     string str;
 
-    cin >> str;
+    getline (cin, str);
 
     // Imprime a string invertida
     for (int i = (str).length(); i >= 0; i--)
