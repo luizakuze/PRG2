@@ -1,5 +1,5 @@
 ## Previsor de tempo
-
+- Escreva um programa que informe a previsão do tempo dada a condições de uum termômetro e de um barômetro.
 
 ## Em C++ e utilizando matriz
 ```
