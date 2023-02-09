@@ -1,5 +1,4 @@
 ## Um ajustador de texto
----
 
 ### Em C
 ```
@@ -35,7 +34,6 @@ int main()
 
 ### Em C++
 ```
-//https://leandrojonk.wordpress.com/2007/04/16/usando-a-funcao-toupper-em-c/
 // Um ajustador de texto
 
 #include <iostream>
