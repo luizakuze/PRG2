@@ -6,14 +6,14 @@ com os seguintes conceitos, do maior para o menor:
 2. Proficiente
 3. Suficiente
 4. Insuficiente
-<br>
+
 Dado um conjunto de conceitos, a nota resultante deve ser calculada da seguinte forma:
 <br>
+
 - Excelente: metade ou mais das notas ser Excelente, e as demais serem Proficientes.
 - Proficiente: metade ou mais das notas ser Proficiente, e as demais serem Suficiente.
 - Suficiente: demais casos, contanto que nenhuma nota seja Insuficiente.
 - Insuficiente: quando alguma nota for Insuficiente.
-<br>
 Escreva um programa que calcule a nota resultante, dado um conjunto de conceitos fornecidos pelo usuário.
 O usuário deve fornecer pelo menos três conceitos para esse cálculo. <br>
 Para simplificar, cada conceito deve ser informado pela sua letra inicial. */
