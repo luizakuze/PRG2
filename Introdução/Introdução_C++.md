@@ -42,3 +42,7 @@ A string tem o endereço dos caracteres. Pode comparar como uma variável qualqu
 ---
 O getline pega a string até depois do espaço.
 O Cin pega a string somente até o primeiro espaço.
+
+## isspace
+---
+Função que verifica se o caracter é espaço.
