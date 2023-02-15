@@ -46,3 +46,17 @@ O Cin pega a string somente até o primeiro espaço.
 ## isspace
 ---
 Função que verifica se o caracter é espaço.
+
+
+## Leitura de dados com Cin para uma data
+---
+int dia, mes, ano;
+char sep1, sep2; //as barras da data
+
+cin >> dia;
+cin >> sep1;
+cin >> mes;
+cin >> sep2;
+cin >> ano;
+
+Essa entrada de dados lê um formato DD/MM/AAAA
