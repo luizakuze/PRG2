@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 
     // Verifica se o arquivo foi mesmo aberto
     if (! arq.is_open()){
-        perror("Ao abrir C:/Users/Luiza/Estudo_C/texto.txt");
+        perror("Ao abrir /etc/hosts");
         return errno;
     }
 
@@ -52,11 +52,11 @@ int main()
     cin >> seq_caracter;
 
     // Abre o arquivo que tem esse diretório
-    ifstream arq("C:/Users/Luiza/Estudo_C/texto.txt");
+    ifstream arq("/etc/hosts");
 
     // Verifica se o arquivo foi mesmo aberto
     if (! arq.is_open()){
-        perror("Ao abrir C:/Users/Luiza/Estudo_C/texto.txt");
+        perror("Ao abrir /etc/hosts");
         return errno;
     }
 
