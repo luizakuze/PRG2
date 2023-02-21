@@ -13,11 +13,11 @@ string normaliza(string & nome)
 {
     string sobrenome;
 
-    int i, j;
+    int i;
     int tam_nome = nome.size();
 
-    // Encontra qual é o sobrenom (última palavra)
-    for (i = tam_nome - 1, j = 0; nome[i] != ' '; i--, j++)
+    // Encontra qual é o sobrenome (última palavra)
+    for (i = tam_nome - 1; nome[i] != ' '; i--)
         sobrenome = sobrenome + nome[i];
 
     reverse(sobrenome.begin(), sobrenome.end());
