@@ -1,4 +1,4 @@
-# Arquivos e string
+# Resumo de arquivos e string
 
 ## **Conceito de *Stream*, "Correnteza"**
 
