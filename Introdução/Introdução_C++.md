@@ -1,4 +1,4 @@
-# **Anotações aula2**
+# **Anotações das aulas de Introdução ao C++**
 
 ## Scanf de uma String
 ---
