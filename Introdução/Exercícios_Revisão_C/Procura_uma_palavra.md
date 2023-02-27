@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 
     // Verifica se o arquivo foi mesmo aberto
     if (! arq.is_open()){
-        perror("Ao abrir /etc/hosts");
+        perror("Ao abrir");
         return errno;
     }
 
