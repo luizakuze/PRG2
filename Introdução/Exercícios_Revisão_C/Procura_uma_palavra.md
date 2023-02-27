@@ -17,6 +17,7 @@ int main(int argc, char *argv[])
     // Caso o usuário informe o num errado de argumentos
     if(argc < 3) {
         cout << "Uso: " << argv[0] << " arquivo sequencia" << endl;
+        return 1;
     }
     
     // Abre o arquivo que tem esse diretório
