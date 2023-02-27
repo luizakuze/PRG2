@@ -1,16 +1,26 @@
 //Contar linhas, palavras e caracteres de um arquivo
 
-//Implementação do programa (falta terminar)
 #include <iostream>
 #include <string>
 #include <fstream>
 
 using namespace std;
 
-// Implementar a função!!
 int conta_palavras(string linha) {
-    
-    
+
+    bool espaco = true;
+    int qt_palavra = 0;
+
+    for (int i = 0; i < linha.size(); i++) {
+        if (linha[i] != ' ') {
+            if (espaco) {
+                qt_palavra++;
+                espaco = false;
+            }
+        } else espaco = true;
+    }
+
+    return qt_palavra;
 }
 
 int main(int argc, char *argv[])
@@ -33,13 +43,11 @@ int main(int argc, char *argv[])
         // Soma 1 a cada linha
         qt_linhas++;
 
-        // Add o tamanho da string, para o tamanho de caracteres
+        // Add o tamanho da string ao tamanho de caracteres
         // e +1 por conta do \n (quebra de linha)
         qt_caracter+= linha.size() + 1;
 
         qt_palavras = conta_palavras(linha);
-        
-
     }
 
     cout << qt_linhas << ' ' << qt_palavras << ' ' << qt_caracter << endl;
