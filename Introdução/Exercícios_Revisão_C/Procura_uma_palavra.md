@@ -10,15 +10,8 @@ O programa procura uma palavra dentro de um arquivo e imprime as linhas que não
 
 using namespace std;
 
-int main(int argc, char *argv[])
-{
-    #include <iostream>
-#include <string>
-#include <fstream>
-#include <errno.h>
-
-using namespace std;
-
+// agrc: Quantos argumento
+// argv: Vetor de argumentos
 int main(int argc, char *argv[])
 {
     // Abre o arquivo que tem esse diretório
