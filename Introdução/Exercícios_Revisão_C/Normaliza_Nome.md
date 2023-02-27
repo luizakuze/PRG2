@@ -47,7 +47,6 @@ int main ()
 
 
 ### Outra lógica para a função "normaliza"
-### Implementação do professor
 ```
 #include <iostream>
 #include <string>
