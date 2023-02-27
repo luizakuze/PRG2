@@ -1,5 +1,6 @@
-## Contar linhas, palavras e caracteres de um arquivo
+//Contar linhas, palavras e caracteres de um arquivo
 
+//Implementação do programa (falta terminar)
 #include <iostream>
 #include <string>
 #include <fstream>
