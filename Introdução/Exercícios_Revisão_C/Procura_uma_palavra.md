@@ -12,6 +12,15 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
+    #include <iostream>
+#include <string>
+#include <fstream>
+#include <errno.h>
+
+using namespace std;
+
+int main(int argc, char *argv[])
+{
     // Abre o arquivo que tem esse diretório
     ifstream arq(argv[1]);
 
@@ -27,7 +36,8 @@ int main(int argc, char *argv[])
     while (getline(arq, linha)) {
 
         // Procura a substring dentro do texto usando o find
-        // Procura enquanto o texto não terminar (string::npos)
+        // Procura enquanto o texto não terminar
+        // "Enquanto o arquivo tiver posições p/ procurar" (string::npos) 
         if(linha.find(argv[2]) != string::npos)
             cout << linha << endl;
     }
