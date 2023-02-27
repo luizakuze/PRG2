@@ -14,6 +14,11 @@ using namespace std;
 // argv: Vetor de argumentos
 int main(int argc, char *argv[])
 {
+    // Caso o usuário informe o num errado de argumentos
+    if(argc < 3) {
+        cout << "Uso: " << argv[0] << " arquivo sequencia" << endl;
+    }
+    
     // Abre o arquivo que tem esse diretório
     ifstream arq(argv[1]);
 
