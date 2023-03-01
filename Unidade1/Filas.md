@@ -3,6 +3,11 @@
 É uma estrutura de dado linear, armazena em sequência. A localização de um dado não depende do seu valor. <br> A sua posição na sequência não altera seu valor. <br>
 Tem o comportamento **FIFO** (First In First Out).
 
+### Onde a fila aparece
+- Escalonamento de processos
+- Dados que esperam para serem implementados
+- Resolve problemas de mapeamento
+
 ### Biblioteca
 ```
 #include <queue>
