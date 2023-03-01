@@ -1,6 +1,6 @@
 ## Prog2 📌💻
 
-Esses são os exercícios da aula de **programação 2**, 3ª fase de engenharia de telecom (2023.1). <br> As linguagens de programação utilizadas nessa disciplina são o *C* e o  *C++*. 📚 <br>
+Esses são os exercícios da aula de **programação 2**, 3ª fase de engenharia de telecom (2023.1). <br> A linguaguem de programação utilizada nessa disciplina é o *C++*. 📚 <br>
 
 ### Diretórios 📚 
 
