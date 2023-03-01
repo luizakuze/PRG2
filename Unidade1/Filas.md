@@ -1,6 +1,6 @@
 ## Filas
 
-É uma estrutura de dado linear, ou seja, a localização de um dado não depende do seu valor. <br> A sua posição na sequência não altera seu valor. <br>
+É uma estrutura de dado linear, armazena em sequência. A localização de um dado não depende do seu valor. <br> A sua posição na sequência não altera seu valor. <br>
 Tem o comportamento **FIFO** (First In First Out).
 
 ### Biblioteca
@@ -48,4 +48,3 @@ while (! num.empty()) {
    num.pop(); // desenfileira um número
 }
 ```
-
