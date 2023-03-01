@@ -5,3 +5,4 @@ Esses são os exercícios da aula de **programação 2**, 3ª fase de engenharia
 ### Diretórios 📚 
 
 - **Introdução:** Conceitos iniciais e revisão da disciplina anterior.
+- **Unidade1:** Estruturas de dados lineares (filas, pilhas e listas).
