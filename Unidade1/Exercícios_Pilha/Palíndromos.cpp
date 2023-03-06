@@ -22,8 +22,6 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
-
-    int i; // auxiliar
     stack <char> pilha; // Pilha que armazena cada caracter da palavra
     string palavra = argv[1]; // Recebe a palavra a ser verificada pelo argv[1]
     bool resultado = true;
