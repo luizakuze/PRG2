@@ -1,6 +1,9 @@
 #include "questao.h"
 
-
+/* Passagem por valor = Sem '&', altera a variável somente na função.
+ * Passagem por referência = Com '&', pega o endereço da variável e altera o valor da variável na função original.
+ * Por referência, é mais rápido. Para strings, filas ou pilhas, passamos para referência já que são muitos elementos.
+ * Nesse problema, o objetivo é só ter a eficiência e não alterar a variável na main. Então, colocamos o 'const' */
 queue<string> separa(const string & algo, char sep)
 {
     queue<string> fila_str; // Cria fila que armazena as palavras da string
