@@ -15,6 +15,6 @@ As demais funções do programa são colocadas em outro arquivo, por exemplo *fu
   
  <br>
 
-Além disso, quando criar esse novo arquivo, também se faz um arquivo de extensão *.h* com a declaração de todas as funções. <br> Esse arquivo *.h* deve fazer parte dos includes dos outros 2 arquivos e entre aspas duplas, já que o pré-processador busca pelo arquivo especificado no diretório atual do arquivo fonte que está sendo compilado.
+Além disso, quando criar esse novo arquivo, também se faz um arquivo de extensão *.h* com a declaração de todas as funções, o protótipo delas. <br> Esse arquivo *.h* deve fazer parte dos includes dos outros 2 arquivos e entre aspas duplas, já que o pré-processador busca pelo arquivo especificado no diretório atual do arquivo fonte que está sendo compilado.
 
 <img src="https://user-images.githubusercontent.com/111708035/222964257-c75bc508-8553-4e08-9fb6-31e73d71acba.png" width="40%"/> <br>
