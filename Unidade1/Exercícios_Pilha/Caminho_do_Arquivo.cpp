@@ -1,4 +1,3 @@
-// Nessa versão, o problema foi resolvido em apenas um arquivo
 /*Com respeito a caminhos para arquivos ou diretórios, escreva uma função que reduza um caminho absoluto qualquer ao menor caminho absoluto possível.
 Por exemplo,  o caminho:
 
