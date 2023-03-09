@@ -1,4 +1,4 @@
-### Outras formas de fazer a função Separa 
+### Formas de fazer a função Separa 
 Essa função é encontrada no arquivo "questao.cpp"
 
 #### 1 implementação
