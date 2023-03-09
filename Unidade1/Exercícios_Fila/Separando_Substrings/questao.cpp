@@ -1,39 +1,49 @@
 #include "questao.h"
 
-/* Passagem por valor = Sem '&', altera a variável somente na função.
- * Passagem por referência = Com '&', pega o endereço da variável e altera o valor da variável na função original.
- * Por referência, é mais rápido. Para strings, filas ou pilhas, passamos para referência já que são muitos elementos.
- * Nesse problema, o objetivo é só ter a eficiência e não alterar a variável na main. Então, colocamos o 'const' */
-queue<string> separa(const string & algo, char sep)
-{
-    queue<string> fila_str; // Cria fila que armazena as palavras da string
-    string substr; // Será uma palavra da string
-    int i = 0;
+// função que separa o caminho em seus componentes (diretórios e arquivos)
+queue<string> separa(const string &caminho, char sep) {
+    queue<string> sequencia;
+    int pos1 = caminho.find_first_not_of(sep);
 
-    // Lê a string a ser analisada
-    while (algo[i] != '\0') {
-
-        // Encontra um separador
-        if (algo[i] == sep) {
-
-            // Se a string não estiver vazia, adicioina a palavra na fila
-            if (!substr.empty()) {
-                fila_str.push(substr);
-                substr.clear();
-            }
-
-        /* Caso não encontre separador, continua lendo
-         * as posições da string para dentro de uma substring */
-        } else substr += algo[i];
-
-        i++;
+    while (pos1 != string::npos) {
+        int pos2 = caminho.find(sep, pos1 + 1);
+        if (pos2 != string::npos) {
+            string trecho = caminho.substr(pos1, pos2 - pos1);
+            sequencia.push(trecho);
+        } else {
+            string trecho = caminho.substr(pos1);
+            sequencia.push(trecho);
+            break;
+        }
+        pos1 = caminho.find_first_not_of(sep, pos2 + 1);
     }
+    return sequencia;
+}
 
-    /* Na última palavra da string, não haverá separador,
-     * já que a string vai terminar. Então o laço de repetição
-     * assegura que a última string esteja na fila */
-    if (!substr.empty())
-        fila_str.push(substr);
+// função que reduz o caminho absoluto
+string reduz_caminho(const string &caminho) {
+    stack<string> pilha;
+    queue<string> componentes = separa(caminho, '/');
+    while (!componentes.empty()) {
+        string componente = componentes.front();
+        componentes.pop();
+        if (componente == "." || componente == "") {
+            // nada a fazer
+        } else if (componente == "..") {
+            if (!pilha.empty()) {
+                pilha.pop();
+            }
+        } else
+            pilha.push(componente);
 
-    return fila_str;
+    }
+    string resultado;
+    while (!pilha.empty()) {
+        resultado = "/" + pilha.top() + resultado;
+        pilha.pop();
+    }
+    if (resultado.empty()) {
+        resultado = "/";
+    }
+    return resultado;
 }
