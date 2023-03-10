@@ -34,7 +34,7 @@ queue <string> separa(const string & algo, char sep) {
 
 #### 2 implementação
 
-Tratando a string como um arquivo e incluindo a biblioteca <sstream>>
+Tratando a string como um arquivo e incluindo a biblioteca < sstream >
   
 ```
 queue <string> separa(const string & algo, char sep) {
