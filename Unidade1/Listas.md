@@ -1,14 +1,15 @@
 ## Listas
 
-- Armazenados dinamicamente em memória, de forma a se organizarem em uma sequência. <br>
-- Qualquer dado da lista pode ser acessado, independente da posição. <br>
+- Armazenados dinamicamente em memória, de forma a se organizarem em uma sequência. 
+- Qualquer dado da lista pode ser acessado, independente da posição.
 - Cada dado armazenado possui referências tanto do seu sucessor quando do seu antecessor, então <br>
 quando quiser acessar um dado do meio da lista, tem que ser ou pelo inicio ou final da lista.
 
 ### Aplicações
 
-- Armazenar um conjunto de dados cuja quantidade não pode ser conhecida anteoriormente. Ex. Banco de dados <br>
+- Armazenar um conjunto de dados cuja quantidade não pode ser conhecida anteoriormente. 
 - Armazenar dados cuja ordem em memória é modificada frequentemente.
+- Ex. Banco de dados e playlists de música. 
 
 ### Biblioteca
 ```
