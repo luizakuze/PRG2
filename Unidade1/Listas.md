@@ -8,6 +8,7 @@ quando quiser acessar um dado do meio da lista, tem que ser ou pelo inicio ou fi
 ### Aplicações
 
 - Armazenar um conjunto de dados cuja quantidade não pode ser conhecida anteoriormente. 
+- Quando tiver que retirar um dados do início (push_front) ou do meio, a lista é melhor que o vector. <br> Se tiver que somente alterar dados que chegam no final, o vector é melhor.
 - Armazenar dados cuja ordem em memória é modificada frequentemente.
 - Ex. Banco de dados e playlists de música. 
 
