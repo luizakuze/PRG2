@@ -37,14 +37,23 @@ lista.push_back("oi");
 lista.pop_front(); // Tira a string "luiza"
 lista.pop_back(); // Tira a string "oi"
 ```
+#### Algumas operações da lista precisam usar ITERADORES como parâmetros. Comandos como, por exemplo, o insert e o erase.
 - begin(): Início da lista;
 - back(): Fim da lista;
 - insert: Insere um dado em determinada posição;
 - erase: Remove um dado ou  mais de determinada posição.
 ```
-it = lista.begin();
+// Lista com alguns valores iniciados
+list <string> lista = {"luiza", "lulu", "luizinha"}
+
+// Obtém o iterador do primeiro dado da lista
+auto it = lista.begin();
+
+// Incrementando o iterador
 it++;
+
 // Add a string "ola mundo" na posição 2 da lista
+// Ficando na frente de "lulu"
 lista.insert (it, "ola mundo";
 ```
 - size: retorna o comprimento da lista;
