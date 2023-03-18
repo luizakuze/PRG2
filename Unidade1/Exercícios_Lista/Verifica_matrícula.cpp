@@ -20,47 +20,37 @@ int main(int argc, char *argv[])
     // Abre arquivo1 com todas as matrículas
     ifstream arq1(argv[1]);
     if (!arq1.is_open()) {
-        cerr << "Erro: não foi possível abrir o arquivo " << argv[1] << endl;
-        return 1;
+        perror("ERRO: ");
+        return errno;
     }
 
     // Abre arquivo2 com quem fez a matrícula
     ifstream arq2(argv[2]);
     if (!arq2.is_open()) {
-        cerr << "Erro: não foi possível abrir o arquivo " << argv[2] << endl;
-        return 1;
+        perror("ERRO: ");
+        return errno;
     }
 
-    // Armazena alunos que não fizeram matrícula
-    list <string> nao_fez_m;
 
-    // Para cada matrícula de aluno
-    string m;
-    while (arq1 >> m) {
+    list <string> matriculados;
 
-        bool tem_matricula_igual = false;
-
-        // Verifica se matrícula foi feita
-        string fez_m;
-        while(arq2 >> fez_m) {
-
-            // Se achar um aluno que fez a matrícula
-            if (m == fez_m) {
-                tem_matricula_igual = true;
-                break;
-            }
-        }
-
-        // Se não encontrar a matrícula do aluno
-        if (!tem_matricula_igual)
-            nao_fez_m.push_back(m);
+    // Para cada matrícula de aluno, add na lista de matricula
+    string matricula;
+    while (arq1 >> matricula) {
+        matriculados.push_back(matricula);
     }
+
+    // Lê os que renovaram e remove os nomes que já fizeram a matrícula
+    string renovado;
+    while (arq2 >> renovado) {
+        matriculados.remove(renovado);
+    }
+
 
     // Imprime na tela alunos que não fizeram a matrícula
-    for (const string & matricula : nao_fez_m) {
-        cout << matricula << ' ';
+    for (const string & dado : matriculados) {
+        cout << dado << ' ';
     }
-    cout << endl;
 
     return 0;
 }
