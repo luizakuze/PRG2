@@ -15,6 +15,8 @@ banana,laranja,abacaxi,pitanga,limao  */
 
 #include "questao.h"
 
+// A operação "unique", resolve o problema.
+
 void unicos(list<string >& l) {
     if (l.empty()) return; // lista vazia
 
