@@ -70,3 +70,51 @@ while (! lista.empty()) {
 ```
 lista.clear();
 ```
+#### Método sort
+- sort: Ordena elementos em uma sequência em ordem crescente ou decrescente.
+
+**Sintaxe inicial**
+```
+sort(início, fim, comparação);
+```
+**Explicação** <br>
+"início" é um ponteiro para o primeiro elemento da sequência a ser ordenada, "fim" é um ponteiro para o elemento seguinte ao último <br> elemento da sequência, e "comparação" é uma função opcional que especifica como os elementos devem ser comparados para a ordenação.
+<br> 
+Se a "comparação" não for encontrada, o sort utiliza o operador '<'. Isso significa que os elementos estarão ordenados em ordem crescente.
+<br> <br>
+**Exemplo 1**
+```
+numeros.push_back(21);
+numeros.push_back(8);
+numeros.push_back(12);
+numeros.push_back(17);
+
+// ordena a lista
+numeros.sort();
+
+// mostra o conteúdo da lista
+for (auto & x: numeros) {
+   cout << x << endl;
+}
+```
+**Exemplo 2**
+```
+#include <algorithm>
+#include <vector>
+#include <iostream>
+
+bool greater(int a, int b) {
+    return a > b;
+}
+
+int main() {
+    std::vector<int> v = {4, 2, 7, 1, 3};
+    std::sort(v.begin(), v.end(), greater);
+    for (int i = 0; i < v.size(); i++) {
+        std::cout << v[i] << " ";
+    }
+    std::cout << std::endl;
+    return 0;
+}
+
+```
