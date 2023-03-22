@@ -71,7 +71,8 @@ while (! lista.empty()) {
 lista.clear();
 ```
 #### Método sort
-- sort: Ordena elementos em uma sequência em ordem crescente ou decrescente.
+- sort: Ordena elementos em uma sequência em ordem crescente;
+- reverse: Ordena em ordem decrescente.
 
 **Sintaxe inicial**
 ```
