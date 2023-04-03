@@ -6,3 +6,4 @@ Esses são os exercícios da aula de **programação 2**, 3ª fase de engenharia
 
 - **Introdução:** Conceitos iniciais e revisão da disciplina anterior.
 - **Unidade1:** Estruturas de dados lineares (filas, pilhas e listas).
+- **Unidade2:** EStruturas de dados associativas (tabelas hash e árvores).
