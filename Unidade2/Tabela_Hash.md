@@ -4,12 +4,9 @@
 
 ### Necessidades
 
-- Procure por elementos dentro de um grande conjunto de dados
-- Encontre elementos duplicados em um conjunto de dados
-- Armazene e obtenha rapidamente elementos de um grande conjunto de dados
-
-- Cada dado tem uma chave única
-- unordered_map x unordered_set
+- Procurear por elementos dentro de um grande conjunto de dados.
+- Encontrar elementos duplicados em um conjunto de dados.
+- Armazenar e obtenr rapidamente elementos de um grande conjunto de dados.
 
 ### Funcionamento
 
