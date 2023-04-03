@@ -6,7 +6,9 @@ Escreva um programa que leia esse arquivo, e apresente na saída padrão os núm
 O nome do arquivo é informado como primeiro argumento de linha de comando.
 Seu programa deve apresentar esses números de forma ordenada, usando o ordenamento usual para string.
 
-Use conjunto para resolver este exercício */
+Use conjunto para resolver este exercício 
+
+Esse exercício feito utilizado tabelas hash é mais eficiendo do que foram feitos anteriormente com lista */
 
 #include <iostream>
 #include <string>
