@@ -23,59 +23,60 @@ O nome do arquivo de palavras é fornecido como primeiro argumento de linha de c
 Se o arquivo não puder ser aberto, esta mensagem de erro deve ser apresentada:
 
 Arquivo invalido
-
 */
-
 
 #include <iostream>
 #include <string>
 #include <fstream>
-#include <vector>
 #include <list>
 #include <unordered_map>
 
 using namespace std;
 
-// junta -> junta as strings e separa por espaços (função separa)
-string junta (vector <string> & v) {
-    string r;
+// FUnção que indica para o sort que ele deve ordenar pela quantidade de palavras
+bool compara_par (const pair<string,int> & p1, const pair<string,int> & p2) {
 
-    if (!v.empty()) {
-        for (auto &dado: v) {
-            r += dado + ' ';
-        }
-        r.pop_back();
+    // Se tiverem a mesma quantidade de caracteres
+    if(p1.second == p2.second) {
+        return p1.first < p2.first;
     }
-    return r;
+    // Ordena decrescente
+    return p1.second > p2.second;
 }
+
 int main(int argc, char *argv[])
 {
     // Abre arquivo para leitura
     ifstream arq (argv[1]);
 
-    // Verifica se o arquivo foi realmente aberto
-    if (!arq.is_open()) {
-        cerr << "Arquivo invalido" << endl;
-        return 1;
-    }
+    // Cria um conjunto com palavras e suas quantidades
+    unordered_map<string,int> totais;
 
-    unordered_map<int, vector<string>> tab;
+    // Adiciona cada dado do arquivo ao conjunto
+    // O conjunto contém somente dados únicos
     string palavra;
+
+    // Conta as palavras
     while (arq >> palavra) {
-        //vector<string> & v = tab[palavra.size()];
-        //v.push_back(palavra);
-        tab[palavra.size()].push_back(palavra);
+            totais[palavra]++;
     }
 
-    list <int> l_chaves;
-    for (auto & par: tab) {
-        l_chaves.push_back(par.first);
-    }
-    l_chaves.sort();
+    // Cria uma lista com palavras e número de repetições
+    list<pair<string,int>> resultado (totais.begin(), totais.end());
 
-    // Imprime palavras
-    for (auto & chave: l_chaves) {
-        cout << junta(tab[chave]) << endl;
+    // Como é a forma de comparar
+    resultado.sort(compara_par);
+
+    // Imprime dados
+    int cont = 0;
+    for (auto &dado: resultado) {
+        // Verifica se já imprimiu x vezes
+        if (cont == stoi(argv[2])) {
+            break;
+        } else {
+            cout << dado.first << ' ' << dado.second << endl;
+            cont++;
+        }
     }
 
     return 0;
