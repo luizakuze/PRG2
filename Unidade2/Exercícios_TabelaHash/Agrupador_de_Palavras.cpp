@@ -15,8 +15,14 @@ bola
 ceu mar 
 caju pato bola
 banana
+
 As linhas devem estar ordenadas de acordo com o comprimento de palavras.
-As palavras de cada linha devem aparecer na ordem alfabética caso o comprimento seja igual.
+As palavras de cada linha devem aparecer na ordem em que foram lidas do arquivo.
+
+O nome do arquivo de palavras é fornecido como primeiro argumento de linha de comando.
+Se o arquivo não puder ser aberto, esta mensagem de erro deve ser apresentada:
+
+Arquivo invalido
 
 */
 
