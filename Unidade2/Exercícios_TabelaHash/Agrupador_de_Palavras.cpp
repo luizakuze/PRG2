@@ -24,19 +24,24 @@ As palavras de cada linha devem aparecer na ordem alfabética caso o comprimento
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <vector>
 #include <list>
 #include <unordered_map>
 
 using namespace std;
 
-// Indica para o sort que ele deve ordenar
-bool compara_par (const pair<string,int> & p1, const pair<string,int> & p2) {
-    if (p1.second == p2.second) {
-        return p1.first < p2.first;
-    }
-    return p1.second < p2.second;
-}
+// junta -> junta as strings e separa por espaços (função separa)
+string junta (vector <string> & v) {
+    string r;
 
+    if (!v.empty()) {
+        for (auto &dado: v) {
+            r += dado + ' ';
+        }
+        r.pop_back();
+    }
+    return r;
+}
 int main(int argc, char *argv[])
 {
     // Abre arquivo para leitura
@@ -48,44 +53,23 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    // Cria uma tabela hash com palavras e seus comprimentos
-    unordered_map<string,int> totais;
-
+    unordered_map<int, vector<string>> tab;
     string palavra;
     while (arq >> palavra) {
-        // associa uma palavra com seu tamanho
-        totais[palavra] += palavra.size();
+        //vector<string> & v = tab[palavra.size()];
+        //v.push_back(palavra);
+        tab[palavra.size()].push_back(palavra);
     }
 
-    // Transforma a tabela hash em uma lista
-    list <pair<string,int>> lista (totais.begin(), totais.end());
-
-    // Ordena por comprimento
-    lista.sort(compara_par);
+    list <int> l_chaves;
+    for (auto & par: tab) {
+        l_chaves.push_back(par.first);
+    }
+    l_chaves.sort();
 
     // Imprime palavras
-    int aux = 0;
-    bool primeira_palavra = true;
-    for (auto & dado: lista) {
-
-        // Imprime a palavra na linha se ela for da mesma qt de palavras
-        if (dado.second == aux) {
-            cout << dado.first << ' ';
-            primeira_palavra = false;
-        } else {
-
-            // Se não for a primeira palavra, quebra de linha
-            if (!primeira_palavra) {
-                cout << endl;
-                cout << dado.first << ' ';
-            } else {
-                // Se for a primeira palavra, imprime
-                cout << dado.first << ' ';
-            }
-        }
-
-        // Atualiza variável auxiliar
-        aux = dado.second;
+    for (auto & chave: l_chaves) {
+        cout << junta(tab[chave]) << endl;
     }
 
     return 0;
