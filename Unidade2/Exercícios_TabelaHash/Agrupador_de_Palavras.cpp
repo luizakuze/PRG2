@@ -1,3 +1,7 @@
+//PROGRAMA NÃO FINALIZADO
+// falta comentar o código
+
+
 /*Um arquivo de texto contém uma palavra por linha.
 Escreva um programa que leia um arquivo e apresente suas palavras agrupadas de acordo com os comprimentos dessas palavras.
 Obrigatoriamente deve ser usada uma tabela hash para realizar esta tarefa.
