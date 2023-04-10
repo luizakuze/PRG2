@@ -54,7 +54,7 @@ int main(int argc, char *argv[]) {
             usuario[nome].acessos++;
             usuario[nome].duracao += tempo;
 
-        // Se não houver ainda esse usuário, adiciona ele ele
+        // Se não houver ainda esse usuário, adiciona ele
         } else {
             dado_usuario aux = {1, tempo};
             usuario[nome] = aux;
