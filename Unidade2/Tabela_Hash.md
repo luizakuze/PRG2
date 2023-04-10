@@ -74,3 +74,5 @@ Exemplo utilizando tabela hash:
     }
   }
 ```
+### Map x Set
+-Estruturas parecidas com as anteriores, mas a principal diferença é que já vem ordenadas. <br> Internamente são implementadas como árvore de pesquisa binária.
