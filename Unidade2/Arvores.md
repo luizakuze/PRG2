@@ -21,4 +21,5 @@ A árvore de pesquisa binária tem duas ideias principais:
 Lembrando que em strings o "valor menor" é o antecessor no alfabeto e o sucessor seria um "valor maior".
 
 ### Biblioteca
-A biblioteca STL não oferece uma árvore de pesquisa binária genérica.
+A biblioteca STL não oferece uma árvore de pesquisa binária genérica. <br>
+Nessa disciplina foi utilizada uma biblioteca feita pelo professor [link_repositorio_biblioteca](https://github.com/IFSC-Engtelecom-Prg2/Prg2_Trees)
