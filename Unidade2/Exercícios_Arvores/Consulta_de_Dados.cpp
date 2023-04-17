@@ -36,7 +36,7 @@ int main() {
 
     // Percorre a base e armazena em uma árvore
     string nome;
-    while (arq >> nome) {
+    while (getline(arq, nome)) {
         nomes.adiciona(nome);
     }
 
