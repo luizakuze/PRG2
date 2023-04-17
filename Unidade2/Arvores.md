@@ -9,7 +9,7 @@
 
 ### Necessidades
 
-Quando precisam ser tomadas decisões bidirecionais em cada ponto de um processo.
+Busca Aproximada. <br> Quando precisam ser tomadas decisões bidirecionais em cada ponto de um processo.
 
 ### Funcionamento
 
