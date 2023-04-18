@@ -20,37 +20,47 @@ Se em vez de uma nome for teclado ENTER, o programa deve terminar.*/
 #include <iostream>
 #include <fstream>
 #include <list>
+#include <string>
 #include <set>
 #include <prglib.h>
 
 using namespace std;
 using prglib::arvore;
 
+#define loop while(true)
+
 int main() {
 
     // Abre arquivo com base de dados
     ifstream arq("nomes.txt");
+    if(!arq.is_open()) {
+        perror ("ao abrir ");
+        return errno;
+    }
 
-    // CRia árvore de pesquisa
+    // Cria árvore de pesquisa
     arvore<string> nomes;
 
-    // Percorre a base e armazena em uma árvore
+    // Percorre todos os nomes do arquivo e armazena em uma árvore
+    // Tem que usar o "getline", pois pode haver nome comṕosto
     string nome;
     while (getline(arq, nome)) {
         nomes.adiciona(nome);
     }
 
-    // Prompt de comando para usuário
-    // Usuário escolhe nome para ser analisado na base
-    cout << "Consulta>" << endl;
-    string n;
-    cin >> n;
 
     // Confere se o nome existe na base
-    if (nomes.existe(n)) {
-        cout << "Nome Que Foi Consultado: EXISTE" << endl;
-    } else {
-        cout << "Nome Que Foi Consultado: INEXISTENTE" << endl;
+    loop {
+        string n; //nome
+        cout << "Consultar>";
+        getline(cin, n);
+        if (n.empty()) break;
+
+        if (nomes.existe(n)) {
+            cout << "Nome Que Foi Consultado: EXISTE" << endl;
+        } else {
+            cout << "Nome Que Foi Consultado: INEXISTENTE" << endl;
+        }
     }
 
     return 0;
