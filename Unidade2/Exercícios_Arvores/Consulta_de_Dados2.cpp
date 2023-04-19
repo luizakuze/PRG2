@@ -85,7 +85,7 @@ int main() {
 
     // Confere se o nome existe na base
     loop {
-        string matricula; //nome
+        string matricula;
         cout << "Consultar>";
         getline(cin, matricula);
         if (matricula.empty()) break;
