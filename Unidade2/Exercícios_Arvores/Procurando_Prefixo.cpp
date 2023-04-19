@@ -36,6 +36,25 @@ using prglib::arvore;
 
 #define loop while(true)
 
+//const string NomeArq = "../dados.txt";
+
+void remove_palavras (vector<string> & v, const string & palavra) {
+    for (auto it = v.begin(); it != v.end(); it++) {
+        if (*it == palavra) {
+            v.erase(it); break;
+        }
+    }
+}
+
+vector<string> procura_palavras(const<string> & arv, const string & prefixo) {
+    string fim = prefixo;
+    fim.back()++;
+    auto palavras = arv.obtemIntervalo(prefixo, fim);
+    
+    remove_palavras(palavras,fim);
+    
+    return palavras;
+}
 
 int main() {
 
@@ -59,9 +78,9 @@ int main() {
         string fim = prefixo;
         fim.back()++; // acesso ao último caracter por referência
 
-        auto v =  arv.obtemIntervalo(prefixo, fim);
+        auto palavras =  procura_palavras(arv, prefixo);
 
-        for (auto & dado: v) cout << dado << endl;
+        for (auto & dado: palavras) cout << dado << endl;
     }
 
     return 0;
