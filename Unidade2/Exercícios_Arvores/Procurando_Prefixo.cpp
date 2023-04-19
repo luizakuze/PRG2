@@ -1,4 +1,6 @@
-/* Em programas em que o usuário deve digitar alguma informação, como nome de pessoa ou um comando,
+/* FALTA TERMINAR 
+
+Em programas em que o usuário deve digitar alguma informação, como nome de pessoa ou um comando,
 é comum existir uma funcionalidade que sugere opções para completar o que está sendo digitado.
 
 Por exemplo, se o usuário precisar informar um nome de pessoa,
