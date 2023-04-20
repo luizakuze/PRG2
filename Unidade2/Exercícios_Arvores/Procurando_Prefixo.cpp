@@ -1,6 +1,4 @@
-/* FALTA TERMINAR 
-
-Em programas em que o usuário deve digitar alguma informação, como nome de pessoa ou um comando,
+/* Em programas em que o usuário deve digitar alguma informação, como nome de pessoa ou um comando,
 é comum existir uma funcionalidade que sugere opções para completar o que está sendo digitado.
 
 Por exemplo, se o usuário precisar informar um nome de pessoa,
@@ -23,6 +21,7 @@ martelo
 Se o usuário digitar uma linha vazia (apenas teclar ENTER), o programa deve terminar.
 As palavras a serem consultadas estão armazenadas no arquivo dados.txt. */
 
+// Falta comentar algumas partes do código
 #include <iostream>
 #include <fstream>
 #include <list>
