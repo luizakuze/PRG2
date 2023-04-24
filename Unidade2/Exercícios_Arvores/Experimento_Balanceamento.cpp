@@ -33,7 +33,7 @@ int main() {
 
     //Cria um diagrama da árvore
     //ofstream out2("arv2.dot");
-    //out2 << desenha_arvore(arv);
+    //out2 << prglib::desenha_arvore(arv);
     
     // Altura após balanceamento
     arv.balanceia();
