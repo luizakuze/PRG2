@@ -22,4 +22,4 @@ Lembrando que em strings o "valor menor" é o antecessor no alfabeto e o sucesso
 
 ### Biblioteca
 A biblioteca STL não oferece uma árvore de pesquisa binária genérica. <br>
-Nessa disciplina foi utilizada uma biblioteca feita pelo professor [link_repositorio_biblioteca](https://github.com/IFSC-Engtelecom-Prg2/Prg2_Trees)
+Nessa disciplina foi utilizada uma biblioteca implementada pelo professor.
