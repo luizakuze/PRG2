@@ -1,4 +1,9 @@
 #include <iostream>
+#include "vetor.h"
+
+using namespace prg2;
+using namespace std;
+
 
 // Operações formato: anexa(v, 5)
 // no exemplo do anexa, sendo v a estrutura e 5 o dado que quer anexar
