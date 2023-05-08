@@ -1,6 +1,7 @@
 ## Projeto de Estrutura de Dados
 
 ### Requisitos
+_"Uso primeiro, depois implementação"_
 - Finalidade da estrutura. <br>
 - Operações que devem ser disponibilizadas.
 
@@ -17,3 +18,4 @@ Como os dados devem ser armazenados? <br>
 ### Expandir a Capacidade
 - Analisa a área que vem em seguida da que está sendo ocupada, verifica se tem espaço e armazena se possível.
 - Caso não seja possível, passa toda a estrutura para outro local da memória.
+
