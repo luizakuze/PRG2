@@ -68,6 +68,4 @@ void vetor_expande(VetorDinamico & v, int capacidade);
 // Contrai o vetor para caber exatamente os dados atuais
 void vetor_contrai(VetorDinamico & v);
 
-
-
 #endif //PROG2_VETOR_H
