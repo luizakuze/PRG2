@@ -53,3 +53,32 @@ Não é possível realocar a memória, expandir ela. Somente criar outro espaço
 ### Sintaxe Ponteiros
 int * v = new int[10] -----> área do heap
 int w[10] ------> área da pilha
+
+
+
+---
+
+### Revisão
+
+- **Em C++**
+
+int x; ---> usual.
+int * p = new int; ---> criando dinamicamente (new é aloque memória dinâmicamente na quantidade de dados necessária).
+
+- **Em C**
+
+int * = (int*)malloc(sizeof(int));
+
+- **Em C++**
+
+int v[10];
+int * pv = new int[10]; ---> dinamicamente.
+
+- **Em C**
+
+int * = (int*)malloc(10*sizeof(int));
+
+Forma dinâmica:
+- Aloca memória
+- Inicializa  aárea de memória se tiver a instrução
+
