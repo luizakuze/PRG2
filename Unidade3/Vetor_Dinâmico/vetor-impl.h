@@ -1,5 +1,7 @@
 #include "vetor.h"
+#include <iostream>
 #include <stdexcept>
+
 
 namespace prg2 {
 
@@ -20,19 +22,21 @@ namespace prg2 {
         return pos - offset;
     }
 
-    VetorDinamico vetor_cria() {
-        VetorDinamico v;
+    template <typename T>
+    VetorDinamico<T> vetor_cria() {
+        VetorDinamico<T> v;
 
         v.len = 0;
         v.capacidade = MinSize;
-        v.mem = new int[MinSize];
+        v.mem = new T[MinSize];
         v.inicio = 0;
         v.fim = 0;
 
         return v;
     }
 
-    void vetor_destroi(VetorDinamico &v) {
+    template <typename T>
+    void vetor_destroi(VetorDinamico<T> &v) {
         // Libera área de memória para não ocorrer vazamento de memória
         delete[] v.mem;
 
@@ -43,9 +47,10 @@ namespace prg2 {
         v.capacidade = 0;
     }
 
-    void vetor_expande(VetorDinamico & v) {
+    template <typename T>
+    void vetor_expande(VetorDinamico<T> & v) {
         // alocar nova área de memória (auto == int *)
-        auto ptr = new int[v.capacidade + MinSize];
+        auto ptr = new T[v.capacidade + MinSize];
 
         // copiar os dados da área anterior para a nova área
         for (int pos = 0; pos < v.len; pos++) {
@@ -61,7 +66,7 @@ namespace prg2 {
         // usar nova área (atribuí-la a v.mem)
         v.mem = ptr;
 
-        // ajusra os indicadores de inicio e fim
+        // ajusta os indicadores de inicio e fim
         v.inicio = 0;
         v.fim = v.len;
 
@@ -69,7 +74,8 @@ namespace prg2 {
         v.capacidade += MinSize;
     }
 
-    void vetor_anexa(VetorDinamico &v, int valor) {
+    template <typename T>
+    void vetor_anexa(VetorDinamico<T> &v, const T& valor) {
         //O vetor deve ser expandido, caso esteja cheio
         if (v.len == v.capacidade) vetor_expande(v);
 
@@ -79,12 +85,13 @@ namespace prg2 {
         v.len++;
     }
 
-    // Já existe uma biblioteca em C++ q já faz algo parecido!!
-    void vetor_insere(VetorDinamico &v, int valor) {
+    template <typename T>
+    void vetor_insere(VetorDinamico<T> &v, const T& valor) {
         vetor_insere(v, 0, valor);
     }
 
-    void vetor_insere(VetorDinamico &v, int pos, int valor) {
+    template <typename T>
+    void vetor_insere(VetorDinamico<T> &v, int pos, const T& valor) {
         // Teste de consistência
         if(pos > v.len) {
             throw std::invalid_argument("posicao invalida");
@@ -96,7 +103,7 @@ namespace prg2 {
         for (int j = v.len; j > pos; j--) {
             int k = soma_circular(j, v.capacidade, v.inicio);
             int m = soma_circular(j-1, v.capacidade, v.inicio);
-            v.mem[m] = v.mem[k];
+            v.mem[k] = v.mem[m];
         }
 
         // Coloca o novo valor na pos
@@ -106,25 +113,26 @@ namespace prg2 {
         v.fim = soma_circular(v.fim, v.capacidade);
     }
 
-    int &vetor_frente(VetorDinamico &v) {
+    template <typename T>
+    T &vetor_frente(VetorDinamico<T> &v) {
         if (v.len == 0) {
             throw std::invalid_argument("vetor vazio");
         }
         return v.mem[v.inicio];
     }
 
-    int &vetor_atras(VetorDinamico &v) {
+    template <typename T>
+    T &vetor_atras(VetorDinamico<T> &v) {
         if (v.len == 0) {
             throw std::invalid_argument("vetor vazio");
         }
         uint32_t ultimo = subtracao_circular(v.fim, v.capacidade); // pos ultimo dado
-//        if (v.fim > 0) ultimo = v.fim-1;
-//        else ultimo = v.len-1;
 
         return v.mem[ultimo];
     }
 
-    void vetor_remove_inicio(VetorDinamico &v) {
+    template <typename T>
+    void vetor_remove_inicio(VetorDinamico<T> &v) {
         if (v.len == 0) {
             throw std::invalid_argument("posicao invalida");
         }
@@ -133,7 +141,8 @@ namespace prg2 {
         v.len--;
     }
 
-    void vetor_remove_fim(VetorDinamico &v) {
+    template <typename T>
+    void vetor_remove_fim(VetorDinamico<T> &v) {
         if (v.len == 0) {
             throw std::invalid_argument("vetor vazio");
         }
@@ -142,7 +151,8 @@ namespace prg2 {
         v.len--;
     }
 
-    void vetor_remove(VetorDinamico &v, int pos) {
+    template <typename T>
+    void vetor_remove(VetorDinamico<T> &v, int pos) {
         if (pos >= v.len) {
             throw std::invalid_argument("posicao invalida");
         }
@@ -158,62 +168,77 @@ namespace prg2 {
         v.fim = subtracao_circular(v.fim, v.capacidade);
     }
 
-    bool vetor_vazio(const VetorDinamico &v) {
+    template <typename T>
+    bool vetor_vazio(const VetorDinamico<T> &v) {
         return v.len == 0;
     }
 
-    int &vetor_obtem(VetorDinamico &v, int pos) {
+    template <typename T>
+    T &vetor_obtem(VetorDinamico<T> &v, int pos) {
         // testa se pos é válida, e dispara exceção
         if (v.len <= pos) {
             throw std::invalid_argument("posicao invalida");
         }
         // Ajustar pos de acordo com o deslocamento
         pos = soma_circular(pos, v.capacidade, v.inicio);
-//        pos += v.inicio;
-//        if (pos >= v.capacidade) {
-//            pos -= v.capacidade;
-//        }
 
         return v.mem[pos];
     }
 
-//    const int &vetor_obtem(const VetorDinamico &v, int pos) {
-//
-//    }
+    template <typename T>
+    const T & vetor_obtem(const VetorDinamico<T> &v, int pos) {
 
-    int vetor_tamanho(const VetorDinamico &v) {
+    }
+
+    template <typename T>
+    int vetor_tamanho(const VetorDinamico<T> &v) {
         return v.len;
     }
 
-    int vetor_capacidade(const VetorDinamico &v) {
+    template <typename T>
+    int vetor_capacidade(const VetorDinamico<T> &v) {
         return v.capacidade;
     }
 
-    void vetor_limpa(VetorDinamico &v) {
+
+    template <typename T>
+    void vetor_limpa(VetorDinamico<T> &v) {
         v.len = 0;
         v.inicio = 0;
         v.fim = 0;
     }
 
-    void vetor_ordena(VetorDinamico &v) {
+    template <typename T>
+    void vetor_ordena(VetorDinamico<T> &v) {
 
     }
 
-    void vetor_inverte(VetorDinamico &v) {
+    template <typename T>
+    void vetor_inverte(VetorDinamico<T> &v) {
 
     }
 
-    void vetor_unicos(VetorDinamico &v) {
+    template <typename T>
+    void vetor_unicos(VetorDinamico<T> &v) {
 
     }
 
-    void vetor_expande(VetorDinamico &v, int capacidade) {
+    template <typename T>
+    void vetor_expande(VetorDinamico<T> &v, int capacidade) {
 
     }
 
-    void vetor_contrai(VetorDinamico &v) {
+    template <typename T>
+    void vetor_contrai(VetorDinamico<T> &v) {
 
     }
 
+    template <typename T>
+    void mostra_vetor(VetorDinamico<T> & v) {
+        for (int i=0; i < vetor_tamanho(v); i++) {
+            std::cout << vetor_obtem(v, i) << ' ';
+        }
+        std::cout << std::endl;
+    }
 
 }
