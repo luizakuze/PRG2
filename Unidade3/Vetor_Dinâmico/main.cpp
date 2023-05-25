@@ -1,89 +1,70 @@
-#include <iostream>
 #include "vetor.h"
 
 using namespace prg2;
 using std::cout;
 using std::endl;
-
-void mostra_vetor(VetorDinamico & v) {
-    for (int i=0; i < vetor_tamanho(v); i++) {
-        cout << vetor_obtem(v, i) << ' ';
-    }
-    cout << endl;
-}
+using std::string;
 
 int main() {
-    // VetorDinamico<int> v;
 
-    // construtor de vetor
-    // auto v = vetor_cria<int>();
-    auto v = vetor_cria();
+//    // Construtor de vetor
+//    auto v = vetor_cria<float>();
+//
+//    // Teste para vetor dinâmico do tipo float
+//    vetor_anexa(v, 1.11f);
+//    vetor_anexa(v, 2.22f);
+//    vetor_insere(v, 3.33f);
+//    //vetor_insere(v, 1, 20000.1f);
+//
+//    mostra_vetor(v);
+//    cout << "Primeiro dado: " << vetor_frente(v) << endl;
+//    cout << "Ultimo dado: " << vetor_atras(v) << endl;
+//
+//    vetor_remove(v, 2);
+//    mostra_vetor(v);
+//
+//    cout << endl;
 
-    // acrescenta um dado ao final do vetor
-    //vetor_anexa(v, 5);
-    //vetor_anexa(v, 6);
-    //vetor_anexa(v, 7);
+    // Teste para vetor dinâmico do tipo string
 
-    //cout << "Tamanho: " << vetor_tamanho(v) << endl;
-    //cout << "Posição 1: " << vetor_obtem(v, 1) << endl;
+    auto v2 = vetor_cria<string>();
 
-    mostra_vetor(v);
+    vetor_anexa<string>(v2, "um");
+    vetor_anexa<string>(v2, "dois");
+    vetor_anexa<string>(v2, "tres");
+    vetor_insere<string>(v2, "quatro");
+    //vetor_insere<string>(v2, 1, "cinco");
 
-    for (int j = 0; j < 10; j++) {
-        vetor_anexa(v, j+10);
-    }
+    mostra_vetor(v2);
+    cout << "Primeiro dado: " << vetor_frente(v2) << endl;
+    cout << "Ultimo dado: " << vetor_atras(v2) << endl;
 
-    cout << "Tamanho: " << vetor_tamanho(v) << endl;
+//    vetor_remove(v2, 2);
+//    cout << "Remove dado posição 2: ";
+//    mostra_vetor(v2);
+//
+//    vetor_remove_inicio(v2);
+//    cout << "Remove dado do inicio: ";
+//    mostra_vetor(v2);
+//
+//    vetor_remove_fim(v2);
+//    cout << "Remove dado do fim: ";
+//    mostra_vetor(v2);
 
-    //cout << "Posição 1: " << vetor_obtem(v, 1) << endl;
-    mostra_vetor(v);
+    //vetor_limpa(v2);
+    //mostra_vetor(v2);
 
-    cout << "Fim: " << vetor_atras(v) << endl;
+    cout << "Tamanho: " << vetor_tamanho(v2) << endl;
+    cout << "Capacidade: " << vetor_capacidade(v2) << endl;
 
-    vetor_remove_inicio(v);
-    mostra_vetor(v);
+    cout << "Vetor[0]: " << vetor_obtem(v2, 0) << endl;
+    cout << "Vetor[1]: " << vetor_obtem(v2, 1) << endl;
+    cout << "Vetor[2]: " << vetor_obtem(v2, 2) << endl;
 
-    vetor_remove_fim(v);
-    mostra_vetor(v);
-
-    vetor_remove(v, 6);
-    mostra_vetor(v);
+    //vetor_obtem(v2, 0);
+    //vetor_obtem(v2, 1);
+    
+    vetor_destroi(v2);
 
     return 0;
-//
-//    vetor_remove(v, 1);
-//
-//    cout << "Tamanho: " << vetor_tamanho(v) << endl;
-//    cout << "Posição 1: " << vetor_obtem(v, 1) << endl;
-//
-//    // insere um dado em, uma posição específica
-//    // do vetor
-//    vetor_insere(v, 1, 10);
-//
-//    cout << "Tamanho: " << vetor_tamanho(v) << endl;
-//    cout << "Posição 1: " << vetor_obtem(v, 1) << endl;
-//
-//    // insere um dado no início do vetor
-//    vetor_insere(v, 11);
-//
-//    // itera o vetor
-//    mostra_vetor(v);
-//
-//    // ordena o vetor em ordem crescente
-//    vetor_ordena(v);
-//    mostra_vetor(v);
-//
-//    vetor_inverte(v);
-//    mostra_vetor(v);
-//
-//    // remove dados contíguos duplicados
-//    vetor_unicos(v);
-//    mostra_vetor(v);
-//
-//    // remove tudo do vetor
-//    vetor_limpa(v);
-//
-//    //destroi um vetor ... destrutor
-//    vetor_destroi(v);
-
 }
