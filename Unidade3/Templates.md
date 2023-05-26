@@ -1,16 +1,17 @@
 ## Templates para tipos de dados genéricos
 
-Os templates generalizam as estruturas de dados. <br>
-Exemplo nas declarações de lista e pilha:
+Os templates generalizam as estruturas de dados. <br> 
+É a possibilidade da estrutura guardar qualquer tipo de dado que o usuário deseja. <br> 
 
+### Exemplo nas declarações de lista e pilha:
 ```
 queue<string> q;
 stack<int> s;
 ```
 
-É a possibilidade da estrutura guardar qualquer tipo de dado que o usuário deseja. <br> <br>
+### Implementação
 
-Na implementação, a declaração do template tem que estar em um arquivo .h <br>
+A declaração do template tem que estar em um arquivo .h <br>
 Tem que ser algo mais ou menos assim:
 
 ```
