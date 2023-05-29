@@ -1,6 +1,9 @@
 ## Anotações projeto - tabelas hash
 
-- Inicialmente, no nosso projeto a tabela não irá expandir. <br>
+- Tabela não irá expandir.
+- Chave vai ser do tipo string.
+- Valor pode ser de qualquer tipo.
+
 [link_moodle](https://moodle.ifsc.edu.br/mod/book/view.php?id=713837&chapterid=112260)
 
 ### Colisão
