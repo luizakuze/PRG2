@@ -20,9 +20,6 @@ Para usufruir dos resultados dessa função, é necessário utilizar as funçõe
     cout << endl << "Segunda melhor rota: " << melhor_rota(tabela_dijkstra, partida, destino) << endl;
     cout << "Distancia: " << melhor_distancia(tabela_dijkstra, partida) << " km" << endl;
 ****************
-
-
-
 */
 
 // Função que implementa a lógica do algoritmo de dijkstra e retorna uma tabela com os SEGUNDOS MELHORES valores encontrados.
