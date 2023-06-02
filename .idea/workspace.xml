@@ -20,7 +20,11 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8eaf27ac-1bbd-4a82-9afa-93296e11db5a" name="Changes" comment="Relatório" />
+    <list default="true" id="8eaf27ac-1bbd-4a82-9afa-93296e11db5a" name="Changes" comment="Projeto 1">
+      <change afterPath="$PROJECT_DIR$/Projetos/Projeto1/img.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/Projeto1/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/Projeto1/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -105,7 +109,7 @@
       <option name="presentableId" value="Default" />
       <updated>1683491426634</updated>
       <workItem from="1683491430139" duration="1753000" />
-      <workItem from="1685741258564" duration="230000" />
+      <workItem from="1685741258564" duration="871000" />
     </task>
     <task id="LOCAL-00001" summary="Projeto 2">
       <created>1683491628669</created>
@@ -135,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683493084413</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Projeto 1">
+      <created>1685741689891</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1685741689891</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,6 +167,7 @@
     <MESSAGE value="Projeto 2" />
     <MESSAGE value="Projeto 2 - Código completo" />
     <MESSAGE value="Relatório" />
-    <option name="LAST_COMMIT_MESSAGE" value="Relatório" />
+    <MESSAGE value="Projeto 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Projeto 1" />
   </component>
 </project>
