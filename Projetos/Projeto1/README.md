@@ -16,7 +16,7 @@ Veja o exemplo a seguir para entender esse problema:
 
 - Preços de cada dia: 100, 70, 75, 81, 86, 60, 62, 88
 - Dias com preço menor ou igual: 1, 1, 2, 3, 4, 1, 2, 7
-- 
+
 A quantidade de dias anteriores com preços menores é sempre pelo menos 1, pois ela inclui o próprio dia usado como referência.
 
 Um padrão interessante a buscar com essa análise é calcular a probabilidade de haver N dias consecutivos de preços crescentes, sendo N um valor inteiro > 1. <br>
