@@ -1,4 +1,4 @@
-## Analisador de preços de ações 💸💸
+## Projeto 1 - Analisador de preços de ações 💸💸
 
 ### Introdução 📌
 
