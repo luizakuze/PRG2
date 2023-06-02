@@ -1,6 +1,6 @@
-## Analisador de preços de ações
+## Analisador de preços de ações 💸💸
 
-### Introdução
+### Introdução 📌
 
 A análise de séries numéricas busca identificar tendências na sequência de números. <br>
 As variações dos valores de uma série podem parecer quase aleatórias, porém padrões podem ser identificados em diferentes intervalos de tempo. 
@@ -23,7 +23,7 @@ Um padrão interessante a buscar com essa análise é calcular a probabilidade d
 Com isso, um investidor pode estimar o risco de que uma ação possa cair, dado que seu preço subiu por um certo número de dias consecutivos. <br>
 Se ele entender que esse risco está acima do aceitável, pode decidir vender a ação.
 
-### Analisando o projeto
+### Analisando o projeto 📘
 
 A análise de padrões em séries numéricas pode ser feita com um processo de identificação de probabilidade de dias consecutivos de valores ascendentes. <br> 
 E para isso um pequeno programa pode ser criado, o qual deve apresentar o seguinte:
@@ -48,6 +48,6 @@ Exemplo:
 O nome do arquivo da série numérica é informado no primeiro argumento de linha de comando.
 
 
-### Objetivo 
+### Objetivo ✨
 
 Apresentar ao usuário a sequência de dias com valores ascendentes, e também as probabilidades de cada quantidade de dias com valores ascendentes.
