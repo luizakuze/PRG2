@@ -5,7 +5,7 @@
 A análise de séries numéricas busca identificar tendências na sequência de números. <br>
 As variações dos valores de uma série podem parecer quase aleatórias, porém padrões podem ser identificados em diferentes intervalos de tempo. 
 
-![img.png](img.png)
+![img.png](https://cdn.discordapp.com/attachments/978456290428862516/1114308544515293224/image.png)
 
 A linha vermelha mostra as cotações ao longo do tempo. <br>
 Pode-se observar que existe uma variação acentuada, pois os preços caem em um certo período, e depois sobem um pouco adiante, e isso se repete de forma aparentemente aleatória. Se alguém pudesse estimar de quando em quando os preços caem (e quanto), e quando sobem, poderia fazer investimentos com maior chance de lucro. <br>
