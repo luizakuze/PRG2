@@ -15,7 +15,7 @@ No nosso projeto, não haverá um tratamento para uma colisão, porém via imped
 ### Função Hash
 Tem os seguintes requisitidos:
 - Ser leve computacionalmente.
-- Espalhar uniformemente os índices entre todos os possíveis valores de saída.
+- Espalhar uniformemente os índices entre todos os possíveis valores de saída. 
 
 Para calcular a posição, pode ser usada a seguinte fórmula:
 ```
@@ -54,3 +54,13 @@ unsigned int hash_simples(const string & chave, int N) {
 }
 ```
 - A **Fletcher32** também é uma boa opção, um algoritmo que já existe.
+
+---
+
+### Tratamento de Colisão
+Colisão é quando o hash é calculado e a posição calculada é a mesma para a chave.
+
+- **Criptografia hash** = Utilziada para gerar chaves eletrônicas, assinaturas digitais.
+
+- **Abordagem escolhida** = Ao invés de guardar um par de chave e valor, guardar em uma lista.
+Consequências -> Busca linear para encontrar o dado adicional, pq agra vai ter uma lista e não diretamente o dado. Aqui, é  visível a necessidade de uma boa função hash, já que os dados tem que ser bem separados para não ficar uma lista muito grande em uma única coluna da tabela (muito custoso para percorrer essa coluna).
