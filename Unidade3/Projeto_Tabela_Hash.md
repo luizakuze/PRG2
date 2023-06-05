@@ -6,12 +6,6 @@
 
 [link_moodle](https://moodle.ifsc.edu.br/mod/book/view.php?id=713837&chapterid=112260)
 
-### Colisão
-
-Acontece quando duas chaves diferentes tem o mesmo índice da tabela. <br>
-No nosso projeto, não haverá um tratamento para uma colisão, porém via impedir de armazenar um dado no mesmo índice.
-
-
 ### Função Hash
 Tem os seguintes requisitidos:
 - Ser leve computacionalmente.
@@ -58,7 +52,8 @@ unsigned int hash_simples(const string & chave, int N) {
 ---
 
 ### Tratamento de Colisão
-Colisão é quando o hash é calculado e a posição calculada é a mesma para a chave.
+Colisão é quando o hash é calculado e a posição calculada é a mesma para a chave. <br>
+__"Acontece quando duas chaves diferentes tem o mesmo índice da tabela."__ <br>
 
 - **Criptografia hash** = Utilziada para gerar chaves eletrônicas, assinaturas digitais.
 
