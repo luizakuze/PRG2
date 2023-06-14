@@ -1,17 +1,14 @@
-## Anotações projeto - tabelas hash
+## Anotações projeto - Tabelas Hash
 
-- Tabela não irá expandir.
-- Chave vai ser do tipo string.
-- Valor pode ser de qualquer tipo.
-
-[link_moodle](https://moodle.ifsc.edu.br/mod/book/view.php?id=713837&chapterid=112260)
+### Objetivo
+Implementar uma estrutura de dados semelhante ao **unordered map**.
 
 ### Função Hash
-Tem os seguintes requisitidos:
+Tem os seguintes requisitidos de implementação:
 - Ser leve computacionalmente.
 - Espalhar uniformemente os índices entre todos os possíveis valores de saída. 
 
-Para calcular a posição, pode ser usada a seguinte fórmula:
+Além dos requisitos, teremos que a posição do dado vai ser calculada a partir da seguinte fórmula:
 ```
 hN(k)= k mod N
 ```
@@ -63,17 +60,9 @@ Consequências -> Busca linear para encontrar o dado adicional, pq agra vai ter 
 Poderia ser a lista ou o vector, mas a lista otimiza o código. Último dado que o usuário acessar, vai para o início da tabela hash. Algunas dados são mais utilizados que outros.
 
 
----
+### Questão da expansão da tabela
 
-### Limitações até agora
-
-- Limitação do tipo da chave.
-- Expansão da tabela.
-- Se torna ineficiente com muitos dados.
-
-### Primeiro, questão da expansão da tabela
-
-- **Fator de Carga:** Tamanho / número de linhas
+- **Fator de Carga:** Tamanho / número de linhas <br>
 
 num de linhas -> buckets
 
@@ -82,17 +71,6 @@ Quando passar o fator de carga, expande a tabela.
 
 Se olhar na biblioteca do C++, tem um tópico "buckets" da "unordened_map".
 (return load_factor)
-
-
----
-
-### Limitações até agora
-
-- Outra forma de tratar colisões
-- Chaves com valores genéricos
-- Iterar valores
-
-- ** Projeto 3 ** -> Refazer um exercício com a nova tabela
 
 
 ### Endereçamento Aberto
@@ -120,3 +98,5 @@ Duas funções hash para calculo da nova posição. <br> Um pouco melhor que as 
 ## Encadeamento x Endereçamento Aberto
 - **Encadeamento** = Tabelas reais.
 - **Endereçamento Aberto** = Quando há pouca memória disponível.
+
+
