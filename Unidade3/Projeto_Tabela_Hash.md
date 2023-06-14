@@ -68,12 +68,12 @@ __"Acontece quando duas chaves diferentes tem o mesmo índice da tabela."__ <br>
 
 Existem algumas abordagens que auxiliam no tratamento de colisões, a **criptografia hash**, por exemplo, é utilizada para gerar chaves eletrônicas e assinaturas digitais.
 
-- **Abordagem escolhida** = Ao invés de guardar um par de chave e valor, guardar em uma lista.
+- **Abordagem escolhida** Ao invés de guardar um par de chave e valor, guardar em uma lista.
 Consequências -> Busca linear para encontrar o dado adicional, pq agra vai ter uma lista e não diretamente o dado. Aqui, é  visível a necessidade de uma boa função hash, já que os dados tem que ser bem separados para não ficar uma lista muito grande em uma única coluna da tabela (muito custoso para percorrer essa coluna).
 
 Poderia ser a lista ou o vector, mas a lista otimiza o código. Último dado que o usuário acessar, vai para o início da tabela hash. Algunas dados são mais utilizados que outros.
 
-
+Algumas técnicas para evitar colisçoes:
 
 ### Endereçamento Aberto
 1 - Função hash para identificar a linha da tabela onde armazenar uma chave
