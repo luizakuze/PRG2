@@ -81,18 +81,18 @@ Algumas técnicas para evitar colisçoes:
 3 - Caso não encontre uma posição alternativa, a tabela é considerada cheia, e deve ser expandida
 
 
--> Sondagem Linear
+**-> Sondagem Linear**
 
 Calcula o hashing, se tiver ocupado armazena na próxima linha. Funciona como fila circular. <br>
 Caso percorrer todas as linhas e não encontrar um local livre, fala que a tabela está cheia.
 
 
--> Sondagem Quadrática
+**-> Sondagem Quadrática**
 
 Como a sondagem linear, mas caso a linha esteja ocupada ela calcula a nova posição a partir de um polinômio quadrático.
 
 
--> Hashing Duplo
+**-> Hashing Duplo**
 
 Duas funções hash para calculo da nova posição. <br> Um pouco melhor que as anteriores. <br> <br> 
 
@@ -100,5 +100,3 @@ Duas funções hash para calculo da nova posição. <br> Um pouco melhor que as 
 ## Encadeamento x Endereçamento Aberto
 - **Encadeamento** = Tabelas reais.
 - **Endereçamento Aberto** = Quando há pouca memória disponível.
-
-
