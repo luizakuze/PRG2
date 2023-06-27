@@ -9,6 +9,6 @@ which uses the C++ programming language.
 - **chapter 1:** Linear data structures (queues, stacks, and lists).
 - **chapter 2:** Associative data structures (hash tables and trees).
 - **chapter 3:** Principles of data structure (memory allocation and algorithms).
-- **projects:** ✨ The projects that were developed throughout the course.
+- **projects:** ✨ The projects that were developed this semester.
 
 ### Explore the directories available to enhance your programming knowledge. Happy studying! 🚀🚀🚀
