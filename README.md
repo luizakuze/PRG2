@@ -1,5 +1,5 @@
 ## Prog2 📌💻
-This is my exercise repository for the `Programming 2` course in
+This is my repository for the `Programming 2` course in
 the third semester of the Telecommunications Engineering program (2022.3 semester). 
 Here you will find exercises and materials related to this course,
 which uses the C++ programming language.
