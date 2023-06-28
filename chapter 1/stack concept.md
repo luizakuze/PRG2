@@ -1,45 +1,43 @@
-## Pilhas
+## Stacks
+- A stack is a linear data structure that stores elements in a sequence.
+- The location of an element does not depend on its value.
+- Stacks follow the behavior of LIFO (Last In First Out).
 
-É uma estrutura de dado linear, armazena em sequência. <br>
-A localização de um dado não depende do seu valor. <br>
-Tem o comportamento **LIFO** (Last In First Out).
-
-### Biblioteca
+### Library
 ```
 #include <stack>
 ```
+### Creating a Stack
+```
+// Stack that stores integers
+stack<int> stack;
+```
+### Operations
+- push: Pushes an element onto the stack.
+- pop: Pops (removes) the top element from the stack (removes the most recently pushed element, following the LIFO order).
+```
+stack.push(1);
+stack.push(2);
+stack.push(3);
+stack.push(4);
 
-### Criar uma fila
+// LIFO (Last In First Out)
+// Here, 4 is popped from the stack
+stack.pop();
 ```
-// Pilha que armazena números inteiros
-stack <int> pilha;
-```
-### Comandos
 
-- push: empilha um dado;
-- pop: desempilha um dado; (Lembrando que ele desempilha o primeiro dado colocado, modelo LIFO)
+top: Returns the top element of the stack (the most recently pushed element).
+```
+cout << "Last pushed element (top): " << stack.top() << endl;
+```
 
+size: Returns the size of the stack (the number of elements stored in it).
+empty: Returns true if the stack is empty, and false otherwise.
 ```
-pilha.push(1);
-pilha.push(2);
-pilha.push(3);
-pilha.push(4);
+cout << "Length of the number stack: " << stack.size() << endl;
 
-// lifo (last in first out)
-// Aqui, saí o 4
-pilha.pop();
-```
-- top: retorna o último dado empilhado;
-```
-top << "Ultimo dado empilhado (topo)=" << pilha.top() << endl;
-```
-- size: retorna o comprimento da pilha (quantos dados estão armazenados);
-- empty: retorna 'true' se a pilha estiver vazia, e 'false' caso contrário.
-```
-cout << "Pilha de numeros tem comprimento=" << pilha.size() << endl;
-
-while (! pilha.empty()) {
-   cout << "Numero: " << pilha.front() << endl;
-   pilha.pop(); // desempilha um dado
+while (!stack.empty()) {
+   cout << "Number: " << stack.top() << endl;
+   stack.pop(); // Pops an element
 }
 ```
