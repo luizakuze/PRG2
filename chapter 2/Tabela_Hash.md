@@ -1,78 +1,79 @@
-## Tabela Hash
+## Hash Table
+- A hash table is an associative data structure, where the position of the data depends on its value. It is also referred to as a hash map or a hash dictionary. The term "hash" refers to the process of spreading or dispersing the data.
+- Each data element has a unique key that is used to access and store the data in the table.
 
-É uma estrutura de dado associativa, ou seja, o posição do dado depende do seu valor. <br> Pode ser chamada de tabela de dispersão. <br> _"Hash"_ significa "espalhamento". Cada dado tem uma chave que permite acessar esse dado, não podem existir chaves duplicadas.
+### Needs
+- Searching for elements within a large dataset.
+- Finding duplicates in a dataset.
+- Storing and retrieving elements quickly from a large dataset.
 
-### Necessidades
+### How It Works
+A query or search is performed using the key of the data being searched. A hash function is used to calculate a numeric value from the key. This numeric value is then used to access a "bucket" or a position in an array where the data is stored. The desired data is obtained from the bucket during the search. The key advantage of a hash table is that the calculation of the position using the hash function is highly efficient, allowing for fast data retrieval.
 
-- Procurear por elementos dentro de um grande conjunto de dados.
-- Encontrar elementos duplicados em um conjunto de dados.
-- Armazenar e obtenr rapidamente elementos de um grande conjunto de dados.
+### Implementations
+- unordered_map: It is an implementation of a hash table, where data is stored as key-value pairs. The key is used to access the corresponding value.
+- unordered_set: It is an implementation of a set, which only contains unique values. It is useful when checking for duplicates.
 
-### Funcionamento
-
-Uma consulta é feita por meio da chave do dado procurado. Uma função chamda "função hash" calcula um número a partir de sua chave. Esse número é usado para acessar um "bucket", uma ṕosição de um vetor que é onde há os dados armazenados. Obtem-se então o dado procurado durante a consulta. <br> <br> A grande vantagem da tabela é que o cálculo da posição pela função hash é muito eficiente (rápida), e assim se localiza o dado muito rapidamente.
-
-### Implementações
-
-- unordered_map: É de fato uma **tabela hash**, em que os dados são armazenados com sua chave e valor. A chave é utilizada para acessar o dado.
-- unordered_set: É um **conjunto**, em que só contém dados com valores únicos. É utilizado quando surge a necessidade de verificar a duplicação de dados.
-
-### Biblioteca 
-
+### Library
 ```
 #include <unordered_map>
 #include <unordered_set>
 ```
-### Criar uma tabela hash
-```
-// Chave com tipo string e dado com valor inteiro
-unordered_map<string,int> tab;
-```
-### Criar um conjunto
-```
-// Conjunto que armazena dados do tipo string
-unordered_set<string> conj;
-```
-### Para percorrer cada dado 
-```
-for (auto & dado: tab) {
-  cout << dado.first << ' '<< dado.second;
-}
-```
-Utilizar o "auto" deixa o código limpo e legível, o que acontece é o seguinte:
-```
-for (pair<string,int> & dado: tab) {
-  cout << dado.first << ' ' << dado.second; 
-}
-```
-Uma terceira forma, não usual e não tão recomendada
-```
-auto it= tab.begin(); it =tab.end(); it++) {
-cout << it->first << ": " << it->second;
-}
-```
-### Comandos
 
-- **count:** Verifica quantas vezes apareceu o dado.
-
-Exemplo utilizando tabela hash:
+### Creating a Hash Table
 ```
-  // Lê um par de valores de um arquivo
-  // esse par é composto pelo nome de um produto e de sua quantidade
-  while (arq >> produto >> qtde) {
-  
-    // se chave (nome do produto) já existe na tabela (ou seja, já tiver no conjunto desse dado)
-    if (totais.count(produto) > 0) {
-    
-      // acessa o valor a ela associado, e a ele soma o número lido do arquivo
-      totais[produto] += qtde;
-      
-    } else {
-    
-      // senão armazena o número lido, associando-o a esse produto
-      totais[produto] = qtde;
-    }
+// Key is of type string and value is of type integer
+unordered_map<string, int> hashTable;
+```
+
+### Creating a Set
+```
+// Set that stores elements of type string
+unordered_set<string> hashSet;
+```
+
+### Iterating Over Elements
+```
+for (auto& element : hashTable) {
+  cout << element.first << ' ' << element.second;
+}
+```
+
+Using auto makes the code cleaner and more readable, and the following is what it represents:
+```
+for (pair<string, int>& element : hashTable) {
+  cout << element.first << ' ' << element.second; 
+}
+```
+
+A third, less common and less recommended form:
+```
+auto it = hashTable.begin(); it != hashTable.end(); it++) {
+  cout << it->first << ": " << it->second;
+}
+```
+
+### Operations
+- count: Checks how many times a particular data element appears in the hash table.
+
+### Example using a hash table:
+```
+// Read pairs of values from a file
+// Each pair consists of a product name and its quantity
+while (file >> product >> quantity) {
+
+  // If the key (product name) already exists in the hash table (i.e., already present in the set of data)
+  if (totals.count(product) > 0) {
+
+    // Access the associated value and add the read quantity to it
+    totals[product] += quantity;
+
+  } else {
+
+    // Otherwise, store the read quantity and associate it with the product name
+    totals[product] = quantity;
   }
+}
 ```
-### Map x Set
-- Estruturas parecidas com as anteriores, mas a principal diferença é que já vem ordenadas. <br> Internamente são implementadas como árvore de pesquisa binária.
+### Map vs. Set
+Maps and sets are similar to hash tables, but the main difference is that they are already ordered. They are implemented internally as binary search trees.
