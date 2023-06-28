@@ -9,5 +9,5 @@ Here's a brief summary of the commonly used associative data structures:
 ### Tabela Hash
 - Stores related elements that can be accessed using a key.
 
-### Arvore binaria
+### Binary Tree 
 - Stores interconnected elements through nodes.
