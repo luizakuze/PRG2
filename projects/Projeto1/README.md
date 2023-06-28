@@ -51,3 +51,5 @@ O nome do arquivo da série numérica é informado no primeiro argumento de linh
 ### Objetivo ✨
 
 Apresentar ao usuário a sequência de dias com valores ascendentes, e também as probabilidades de cada quantidade de dias com valores ascendentes.
+
+## Dê uma olhada no relatório para nossa ideias futuras e melhorias, além da lógica utilizada na implementação!!
