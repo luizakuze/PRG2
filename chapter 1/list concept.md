@@ -1,89 +1,89 @@
-## Listas
+## Lists
+- Dynamically stored in memory, organizing themselves in a sequence.
+- Any data in the list can be accessed regardless of its position.
+- Each stored data has references to both its successor and predecessor, so when you want to access data in the middle of the list, it must be done either from the beginning or the end of the list.
+ 
+### Applications
+- Storing a set of data whose quantity cannot be known beforehand.
+- When you need to remove data from the beginning (push_front) or the middle, the list is better than a vector. If you only need to modify data that arrives at the end, the vector is better.
+- Storing data whose memory order is frequently modified.
+- Examples include databases and music playlists.
 
-- Armazenados dinamicamente em memória, de forma a se organizarem em uma sequência. 
-- Qualquer dado da lista pode ser acessado, independente da posição.
-- Cada dado armazenado possui referências tanto do seu sucessor quando do seu antecessor, então <br>
-quando quiser acessar um dado do meio da lista, tem que ser ou pelo inicio ou final da lista.
-
-### Aplicações
-
-- Armazenar um conjunto de dados cuja quantidade não pode ser conhecida anteoriormente. 
-- Quando tiver que retirar um dados do início (push_front) ou do meio, a lista é melhor que o vector. <br> Se tiver que somente alterar dados que chegam no final, o vector é melhor.
-- Armazenar dados cuja ordem em memória é modificada frequentemente.
-- Ex. Banco de dados e playlists de música. 
-
-### Biblioteca
-```
+### Library
+````
 #include <list> lista;
+````
+
+### Creating a List
+```
+// List that stores strings
+list <string> names;
 ```
 
-### Criar uma lista
+### Commands
+- push_front: Adds data to the beginning of the list.
+- push_back: Adds data to the end of the list.
+- pop_front: Removes data from the front of the list.
+- pop_back: Removes data from the end of the list.
 ```
-// Lista que armazena strings
-list <string> nomes;
+list.push_front("luiza");
+list.push_back("kuze");
+list.push_back("oi");
+
+list.pop_front(); // Removes the string "luiza"
+list.pop_back(); // Removes the string "oi"
 ```
-### Comandos
 
-- push_front: Add um dado ao início da lista;
-- push_back: Add um dado ao final da lista;
-- pop_front: Retira um dado de frente da lista; 
-- pop_back: Retira um dado do final da lista.
-
+Some list operations require ITERATORS as parameters, such as the insert and erase commands.
+- begin(): Beginning of the list.
+- back(): End of the list.
+- insert: Inserts data at a certain position.
+- erase: Removes one or more data from a specific position.
 ```
-lista.push_front("luiza");
-lista.push_back("kuze");
-lista.push_back("oi");
+// List with some initial values
+list <string> list = {"luiza", "lulu", "luizinha"}
 
-lista.pop_front(); // Tira a string "luiza"
-lista.pop_back(); // Tira a string "oi"
-```
-#### Algumas operações da lista precisam usar ITERADORES como parâmetros. Comandos como, por exemplo, o insert e o erase.
-- begin(): Início da lista;
-- back(): Fim da lista;
-- insert: Insere um dado em determinada posição;
-- erase: Remove um dado ou  mais de determinada posição.
-```
-// Lista com alguns valores iniciados
-list <string> lista = {"luiza", "lulu", "luizinha"}
+// Get the iterator of the first data in the list
+auto it = list.begin();
 
-// Obtém o iterador do primeiro dado da lista
-auto it = lista.begin();
-
-// Incrementando o iterador
+// Incrementing the iterator
 it++;
 
-// Add a string "ola mundo" na posição 2 da lista
-// Ficando na frente de "lulu"
-lista.insert (it, "ola mundo";
+// Add the string "hello world" at position 2 in the list
+// Placed in front of "lulu"
+list.insert (it, "hello world");
 ```
-- size: retorna o comprimento da lista;
-- empty: retorna 'true' se a lista estiver vazia, e 'false' caso contrário.
-```
-cout << "Lista de strings tem comprimento=" << lista.size() << endl;
 
-while (! lista.empty()) {
-   cout << "String: " << lista.front() << endl;
-   lista.pop_front(); 
+- size: Returns the length of the list.
+- empty: Returns 'true' if the list is empty, and 'false' otherwise.
+```
+cout << "The string list has a length of " << list.size() << endl;
+
+while (!list.empty()) {
+   cout << "String: " << list.front() << endl;
+   list.pop_front(); 
 }
 ```
-- clear: Remove todos os dados da lista de uma vez.
+clear: Removes all data from the list at once.
 ```
-lista.clear();
+list.clear();
 ```
-#### Método sort
-- sort: Ordena elementos em uma sequência em ordem crescente;
-- reverse: Ordena em ordem decrescente.
 
-**Sintaxe inicial**
+### Sort Method
+- sort: Sorts elements in a sequence in ascending order.
+- reverse: Sorts elements in descending order.
+
+Initial Syntax:
 ```
-sort(início, fim, comparação);
+sort(begin, end, comparison);
 ```
-**Explicação** <br>
-"início" é um ponteiro para o primeiro elemento da sequência a ser ordenada, "fim" é um ponteiro para o elemento seguinte ao último <br> elemento da sequência, e "comparação" é uma função opcional que especifica como os elementos devem ser comparados para a ordenação.
-<br> 
-Se a "comparação" não for encontrada, o sort utiliza o operador '<'. Isso significa que os elementos estarão ordenados em ordem crescente.
+Explanation <br>
+"begin" is a pointer to the first element of the sequence to be sorted, "end" is a pointer to the element following the last <br> element of the sequence, and "comparison" is an optional function that specifies how the elements should be compared for sorting.
+<br>
+If "comparison" is not provided, sort uses the '<' operator. This means that the elements will be sorted in ascending order.
 <br> <br>
-**Exemplo 1**
+
+Example 1
 ```
 numeros.push_back(21);
 numeros.push_back(8);
@@ -98,7 +98,8 @@ for (auto & x: numeros) {
    cout << x << endl;
 }
 ```
-**Exemplo 2**
+Example 2
+
 ```
 #include <algorithm>
 #include <vector>
