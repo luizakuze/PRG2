@@ -6,7 +6,7 @@ In this directory, you can find exercises and materials for each of the associat
 
 Here's a brief summary of the commonly used associative data structures:
 
-### Tabela Hash
+### Hash Table
 - Stores related elements that can be accessed using a key.
 
 ### Binary Tree 
