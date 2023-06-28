@@ -55,8 +55,6 @@ auto it = hashTable.begin(); it != hashTable.end(); it++) {
 
 ### Operations
 - count: Checks how many times a particular data element appears in the hash table.
-
-### Example using a hash table:
 ```
 // Read pairs of values from a file
 // Each pair consists of a product name and its quantity
