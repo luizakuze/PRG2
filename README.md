@@ -4,6 +4,8 @@ the third semester of the Telecommunications Engineering program (2022.3 semeste
 Here you will find exercises and materials related to this course,
 which uses the C++ programming language.
 
+### Attention, the codes have comments in Brazilian Portuguese (pt-br).
+
 ### Directories 📚
 - **introduction:** Initial concepts and review of the previous discipline.
 - **chapter 1:** Linear data structures (queues, stacks, and lists).
