@@ -1,5 +1,7 @@
 ## Project 1 - Stock Price Analyzer 💸💸
 
+### Warning, the report and project implementation are in Brazilian Portuguese (pt-br).
+
 ### Introduction 📌
 Time series analysis aims to identify trends in a sequence of numbers. <br>
 The variations in the values of a series may appear almost random, but patterns can be identified at different time intervals.
