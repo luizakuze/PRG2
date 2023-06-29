@@ -1,10 +1,9 @@
-## Projetos ✈✨
+## Projects ✈✨
+Here are the projects I have developed throughout the semester. ❣
 
-Aqui estão os projetos que desenvolvi ao longo do semestre. ❣
+- **Project 1:** I conducted a study using linear data structures to solve a problem faced by investors when conducting their trades.
 
-- **Projeto 1:** Realizei um estudo utilizando estruturas de dados lineares para resolver um problema enfrentado por investidores na hora de realizar seus negócios.
+- **Project 2:** I developed a project focused on the use of associative data structures, such as a hash table. <br>
+I used a logic similar to Dijkstra's algorithm to find the best route and the shortest distance between two cities.
 
-- **Projeto 2:** Desenvolvi um projeto focado no uso de estruturas de dados associativas, como a tabela hash. <br>
-Utilizei uma lógica semelhante ao algoritmo de Dijkstra para encontrar a melhor rota e a menor distância entre duas cidades.
-
-Para mais informações, acessar os diretórios referentes aos projetos. 
+For more information, please access the directories related to the projects :)
