@@ -1,7 +1,5 @@
-### Formas de fazer a função Separa 
-Essa função é encontrada no arquivo "questao.cpp"
 
-#### 1 implementação
+#### 1 opcao
 ```
 queue <string> separa(const string & algo, char sep) {
     queue <string> sequencia;
@@ -32,9 +30,9 @@ queue <string> separa(const string & algo, char sep) {
 }
 ```
 
-#### 2 implementação
+#### 2 opcao
 
-Tratando a string como um arquivo e incluindo a biblioteca < sstream >
+< sstream >
   
 ```
 queue <string> separa(const string & algo, char sep) {
