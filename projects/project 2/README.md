@@ -1,5 +1,7 @@
 ## Project 2 - Discovering routes on a map 🚗
 
+### Warning, the report and project implementation are in Brazilian Portuguese (pt-br).
+
 ### Objective 📌
 To find the best possible route between two cities on a map.
 
