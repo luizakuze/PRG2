@@ -1,13 +1,13 @@
-## Data structure 
+## Projeto de Estruturas de Dados
 
-In Chapter 3 of the repository, we discussed the development of data structures, specifically the implementation of a dynamic array and a hash table.
+No Capítulo 3 do repositório, discutimos o desenvolvimento de estruturas de dados, especificamente a implementação de um array dinâmico e uma tabela hash.
 
-We began by introducing the concept of a dynamic array, which allows for the alteration of the stored data quantity, unlike a static array. We discussed the requirements and functionalities necessary for this structure, such as dynamic memory allocation.
+Começamos introduzindo o conceito de um array dinâmico, que permite a alteração da quantidade de dados armazenados, ao contrário de um array estático. Discutimos os requisitos e funcionalidades necessários para essa estrutura, como a alocação dinâmica de memória.
 
-Next, we delved into the implementation of the dynamic array structure, using templates to enable the generalization of the stored data type. We explored the attributes of the structure, such as capacity and item count, as well as dynamic memory allocation to store the data.
+Em seguida, mergulhamos na implementação da estrutura do array dinâmico, usando templates para permitir a generalização do tipo de dados armazenado. Exploramos os atributos da estrutura, como capacidade e contagem de elementos, bem como a alocação dinâmica de memória para armazenar os dados.
 
-We then turned our attention to the implementation of a hash table, which aims to create a structure similar to an unordered map. We discussed the importance of a good hash function, which should be computationally efficient and evenly spread indices among possible output values. We provided examples of hash functions and emphasized the need to avoid collisions, where two different keys have the same index in the table.
+Depois, voltamos nossa atenção para a implementação de uma tabela hash, que tem como objetivo criar uma estrutura semelhante a um mapa desordenado. Discutimos a importância de uma boa função de hash, que deve ser computacionalmente eficiente e distribuir os índices uniformemente entre os possíveis valores de saída. Fornecemos exemplos de funções de hash e enfatizamos a necessidade de evitar colisões, onde duas chaves diferentes têm o mesmo índice na tabela.
 
-We discussed table expansion, which occurs when the current size reaches the load factor. We explored the calculation of the load factor and the need to expand the table to accommodate new elements.
+Discutimos a expansão da tabela, que ocorre quando o tamanho atual atinge o fator de carga. Exploramos o cálculo do fator de carga e a necessidade de expandir a tabela para acomodar novos elementos.
 
-Finally, we discussed collision handling techniques, highlighting chaining as the chosen approach, where keys with the same index are stored in a linked list. We also mentioned other techniques such as open addressing with linear probing, quadratic probing, and double hashing.
+Por fim, discutimos técnicas de tratamento de colisões, destacando o encadeamento como a abordagem escolhida, onde chaves com o mesmo índice são armazenadas em uma lista encadeada. Também mencionamos outras técnicas, como endereçamento aberto com sondagem linear, sondagem quadrática e hash duplo.
