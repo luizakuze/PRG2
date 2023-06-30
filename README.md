@@ -1,16 +1,10 @@
 ## Prog2 📌💻
-This is my repository for the `Programming 2` course in
-the third semester of the Telecommunications Engineering program (2022.3 semester). 
-Here you will find exercises and materials related to this course,
-which uses the C++ programming language.
+Esses são os exercícios da aula de programação 2, 3ª fase de engenharia de telecom (2023.1).
+<br> A linguaguem de programação utilizada nessa disciplina é o C++. 📚
 
-### Attention, the codes have comments in Brazilian Portuguese (pt-br).
-
-### Directories 📚
-- **introduction:** Initial concepts and review of the previous discipline.
-- **chapter 1:** Linear data structures (queues, stacks, and lists).
-- **chapter 2:** Associative data structures (hash tables and trees).
-- **chapter 3:** Principles of data structure (memory allocation and algorithms).
-- **projects:** ✨ The projects that were developed this semester.
-
-### Explore the directories available to enhance your programming knowledge. Happy studying! 🚀🚀🚀
+### Diretórios 📚
+- Introdução: Conceitos iniciais e revisão da disciplina anterior.
+- Unidade1: Estruturas de dados lineares (filas, pilhas e listas).
+- Unidade2: Estruturas de dados associativas (tabelas hash e árvores).
+- Unidade3: Princípios do projeto de estrutura de dados (alocação de memória e algoritmos).
+- Projetos: ✨ Os projetos que foram feitos ao longo da disciplina.
