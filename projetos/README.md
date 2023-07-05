@@ -11,4 +11,6 @@ Utilizei uma lógica semelhante ao algoritmo de Dijkstra para encontrar a melhor
 
 - **Projeto 4:** Implementação da estrutura de uma tabela hash.
 
+  **Projeto 5:** A resolução de um problema de contabilidade de transações por meio das estruturas do vetor dinâmico e tabela hash.
+
 ### Para obter mais informações, acesse os diretórios relacionados aos projetos :)
