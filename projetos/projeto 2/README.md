@@ -1,18 +1,16 @@
-## Project 2 - Discovering routes on a map 🚗
+# Projeto 2 - Descobrindo rotas em um mapa 🚗
 
-### Warning, the report and project implementation are in Brazilian Portuguese (pt-br).
+## Objetivo 📌
+Encontrar a melhor rota possível entre duas cidades em um mapa.
 
-### Objective 📌
-To find the best possible route between two cities on a map.
+- Seu programa deve exibir a melhor rota possível entre duas cidades. A rota deve ser apresentada como uma sequência de cidades desde a origem até o destino, juntamente com a distância total da viagem. As cidades devem ser inseridas através do teclado, e o resultado deve ser exibido na tela.
 
-Your program should display the best possible route between two cities. The route should be presented as a sequence of cities from the origin to the destination, along with the total distance of the journey. The cities should be entered via the keyboard, and the result should be displayed on the screen.
+## Descrição 📘
+Suponha que haja um mapa, como podemos representá-lo no programa para facilitar a descoberta de caminhos? Uma ideia é representar um mapa como uma tabela que fornece informações sobre cada par de locais e a distância entre eles.
 
-### Description 📘
-Suppose there is a map, how can it be represented in the program to facilitate the discovery of paths? One idea is to represent a map as a table that provides information about each pair of locations and the distance between them.
+Por exemplo, considere este mapa com algumas cidades próximas a Florianópolis:
 
-For example, consider this map with some municipalities near Florianópolis:
-
-| City 1  | City 2	| Distance  (km) |
+| Cidade 1  | Cidade 2	| Distância (km) |
 |------------------------| --- |----------------|
 | Florianópolis          | São José	| 19             | 
 | Florianópolis	         | Biguaçu	| 24             |
@@ -22,4 +20,4 @@ For example, consider this map with some municipalities near Florianópolis:
 | Biguaçu                |	Antônio Carlos             |	17 |
 | São Pedro de Alcântara	 | Antônio Carlos	| 10             |
 
-Once this table exists, how can a program calculate a route between any two cities? Basically, it needs to use a map search algorithm. The SPF algorithm, created by Dijkstra, can be used in this project.
+Uma vez que essa tabela exista, como um programa pode calcular uma rota entre duas cidades? Basicamente, ele precisa usar um algoritmo de busca de caminhos no mapa. O algoritmo SPF, criado por Dijkstra, pode ser usado neste projeto.
