@@ -9,7 +9,7 @@ Tem o comportamento **LIFO** (Last In First Out).
 #include <stack>
 ```
 
-### Criar uma fila
+### Criar uma pilha
 ```
 // Pilha que armazena números inteiros
 stack <int> pilha;
