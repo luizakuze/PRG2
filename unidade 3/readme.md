@@ -1,4 +1,5 @@
-## Projeto de Estruturas de Dados
+## Unidade 3
+### Projeto de Estruturas de Dados
 
 No Capítulo 3 do repositório, discutimos o desenvolvimento de estruturas de dados, especificamente a implementação de um array dinâmico e uma tabela hash.
 
