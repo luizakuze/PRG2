@@ -1,4 +1,4 @@
-## Capítulo 2
+## Unidade 2
 As estruturas de dados associativas permitem o acesso eficiente e a recuperação de dados com base em um mapeamento de chave-valor, como tabelas de hash ou árvores binárias.
 
 Neste diretório, você encontrará exercícios e materiais para cada uma das estruturas de dados associativas!
