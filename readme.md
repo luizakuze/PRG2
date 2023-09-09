@@ -1,5 +1,5 @@
 ## PRG2 - Programação 2 📌💻
-Esses são os exercícios da aula de programação 2, 3ª fase de engenharia de telecom (2023.1).
+Esses são os meus estudos de programação 2, 3ª fase de engenharia de telecom (2023.1).
 <br> A linguaguem de programação utilizada nessa disciplina é o C++. 📚
 
 ### Projetos principais✨
